@@ -1,1 +1,496 @@
-<html><body>準備中</body></html>
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>🏇 競馬AI予想</title>
+<style>
+ * { margin:0; padding:0; box-sizing:border-box; font-family:'Hiragino Sans','Yu Gothic',sans-serif; }
+ body { background:#f5f4f0; color:#1a1a1a; padding-bottom:40px; }
+ .header { background:linear-gradient(135deg,#2d7a3a,#1f5c2b); color:#fff; padding:16px; }
+ .header h1 { font-size:1.2rem; }
+ .gen { font-size:0.72rem; opacity:0.85; margin-top:4px; }
+ .wrap { max-width:640px; margin:0 auto; padding:10px; }
+ .card { background:#fff; border-radius:12px; padding:14px; margin-bottom:12px;
+          box-shadow:0 1px 4px rgba(0,0,0,0.08); }
+ h2 { font-size:1.02rem; margin-bottom:8px; }
+ .hot { background:linear-gradient(135deg,#fff3e6,#ffe7e1); border:2px solid #ff7043;
+         border-radius:12px; padding:12px; margin-bottom:12px; }
+ .hot .badge { display:inline-block; background:#e8431a; color:#fff; font-size:0.7rem;
+         font-weight:bold; padding:2px 9px; border-radius:10px; margin-bottom:6px; }
+ details { background:#f9f9f7; border-radius:8px; margin-bottom:8px; padding:0; }
+ summary { padding:10px 12px; font-weight:bold; cursor:pointer; font-size:0.92rem;
+            list-style-position:inside; }
+ .race-body { padding:2px 12px 12px; }
+ .verdict { font-size:0.78rem; border-radius:6px; padding:4px 8px; margin-bottom:8px; display:inline-block; }
+ .v-solid { background:#e8f5e9; color:#1f5c2b; border:1px solid #2d7a3a; }
+ .v-normal { background:#fffbe6; color:#8a6d00; border:1px solid #c9a227; }
+ .v-skip { background:#fdecea; color:#b71c1c; border:1px solid #e05050; }
+ .horse { padding:6px 0; border-bottom:1px dashed #eee; font-size:0.88rem; }
+ .horse:last-child { border-bottom:none; }
+ .horse b { font-size:0.95rem; }
+ .stats { color:#666; font-size:0.78rem; }
+ .reason { color:#888; font-size:0.72rem; margin-top:2px; }
+ .bets { margin-top:8px; background:#fffdf8; border:1px solid #e0d8c8; border-radius:8px;
+          padding:8px 10px; font-size:0.8rem; }
+ .bets div { padding:2px 0; }
+ .bets .tag { font-weight:bold; color:#2d7a3a; }
+ .note { font-size:0.72rem; color:#999; margin-top:8px; line-height:1.5; }
+ .stat-grid { display:flex; gap:8px; flex-wrap:wrap; }
+ .stat-box { flex:1; min-width:70px; background:#f5f4f0; border-radius:8px; text-align:center; padding:8px 4px; }
+ .stat-box .n { font-size:1.1rem; font-weight:bold; color:#2d7a3a; }
+ .stat-box .l { font-size:0.68rem; color:#888; }
+ .hist { font-size:0.8rem; padding:5px 0; border-bottom:1px dashed #eee; }
+ .hit { color:#2d7a3a; font-weight:bold; }
+ .miss { color:#bbb; }
+</style></head><body>
+<div class="header"><div class="wrap" style="padding:0">
+  <h1>🏇 競馬AI予想</h1>
+  <div class="gen">最終更新: 07/25 18:13（PC起動中は30分ごとに自動更新）</div>
+</div></div>
+<div class="wrap"><div class="card"><h2>📅 7/25(土) の予想</h2><div class="hot"><span class="badge">🔥 この日一の激熱</span>
+              <div style="font-weight:bold">中京11R 3歳以上1勝クラス</div>
+              <div style="color:#c0392b;font-weight:bold">◎ 3番 ルージュスプリヤ 1番人気</div>
+              <div class="stats">AI勝率46% / 複勝86%</div></div><h2 style="margin-top:10px">📍 札幌</h2><details><summary>1R 3歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 3番 カッサンドラ</b>
+                      <div class="stats">勝率25.1% / 複勝75.7% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸・AI複勝率76%と信頼度高</div></div><div class="horse"><b>○ 5番 アイビーミャーオ</b>
+                      <div class="stats">勝率21.2% / 複勝65.0% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="horse"><b>▲ 7番 カレンココナ</b>
+                      <div class="stats">勝率25.1% / 複勝63.4% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 3</div> <div><span class="tag">[ワイド]</span> 3-5 / 3-7</div> <div><span class="tag">[3連複]</span> 3 - 5・7・4 流し</div> <div><span class="tag">[妙味]</span> ワイド 3-4 (クリコイーコ)</div></div></div></details><details><summary>2R 2歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 4番 コックニー</b>
+                      <div class="stats">勝率12.7% / 複勝79.5% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均2.0着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>○ 5番 ヌーンベルク</b>
+                      <div class="stats">勝率19.7% / 複勝79.5% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均3.0着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>▲ 2番 ヴィヴィアンリーチ</b>
+                      <div class="stats">勝率12.6% / 複勝75.7% / 3番人気</div>
+                      <div class="reason">💬 AI複勝率76%と信頼度高</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 4</div> <div><span class="tag">[ワイド]</span> 4-5 / 4-2</div> <div><span class="tag">[3連複]</span> 4 - 5・2・8 流し</div> <div><span class="tag">[妙味]</span> ワイド 4-7 (シガレス)</div></div></div></details><details><summary>3R 3歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 3番 ヤマメイッカ</b>
+                      <div class="stats">勝率25.2% / 複勝75.7% / 1番人気</div>
+                      <div class="reason">💬 人気とAI評価が一致した堅軸・AI複勝率76%と信頼度高</div></div><div class="horse"><b>○ 6番 アオイミズホ</b>
+                      <div class="stats">勝率19.8% / 複勝65.0% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・スピード指数メンバー1位・前走上がり上位</div></div><div class="horse"><b>▲ 8番 ブルーフレア</b>
+                      <div class="stats">勝率19.4% / 複勝63.4% / 3番人気</div>
+                      <div class="reason">💬 近5走複勝率67%と安定・スピード指数メンバー1位・前走上がり上位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 3</div> <div><span class="tag">[ワイド]</span> 3-6 / 3-8</div> <div><span class="tag">[3連複]</span> 3 - 6・8・5 流し</div> <div><span class="tag">[妙味]</span> ワイド 3-2 (クロームクロス)</div></div></div></details><details><summary>4R 3歳未勝利</summary><div class="race-body"><span class="verdict v-normal">🟡 標準</span><div class="horse"><b>◎ 11番 フレッチャアズーラ</b>
+                      <div class="stats">勝率25.7% / 複勝65.0% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率80%と安定・スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 4番 エアヴァイブス</b>
+                      <div class="stats">勝率14.7% / 複勝53.9% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="horse"><b>▲ 6番 ペカリーナ</b>
+                      <div class="stats">勝率14.7% / 複勝53.9% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 11</div> <div><span class="tag">[ワイド]</span> 11-4 / 11-6</div> <div><span class="tag">[3連複]</span> 11 - 4・6・3 流し</div> <div><span class="tag">[妙味]</span> ワイド 11-10 (フローズンクイーン)</div></div></div></details><details><summary>5R 2歳新馬</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 3番 ホウオウシュウ</b>
+                      <div class="stats">勝率22.4% / 複勝79.5% / 1番人気</div>
+                      <div class="reason">💬 人気とAI評価が一致した堅軸・AI複勝率79%と信頼度高</div></div><div class="horse"><b>○ 1番 レガメデルヴェント</b>
+                      <div class="stats">勝率22.4% / 複勝79.5% / 2番人気</div>
+                      <div class="reason">💬 AI複勝率79%と信頼度高</div></div><div class="horse"><b>▲ 5番 トロフィアス</b>
+                      <div class="stats">勝率14.3% / 複勝86.0% / 3番人気</div>
+                      <div class="reason">💬 AI複勝率86%と信頼度高</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 3</div> <div><span class="tag">[ワイド]</span> 3-1 / 3-5</div> <div><span class="tag">[3連複]</span> 3 - 1・5・2 流し</div> <div><span class="tag">[妙味]</span> ワイド 3-6 (ディアファザー)</div></div></div></details><details><summary>6R 3歳未勝利</summary><div class="race-body"><span class="verdict v-normal">🟡 標準</span><div class="horse"><b>◎ 10番 コワンニシタガウ</b>
+                      <div class="stats">勝率23.7% / 複勝63.4% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 1番 インフィオラータ</b>
+                      <div class="stats">勝率18.4% / 複勝63.4% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="horse"><b>▲ 6番 ヘクセンハウス</b>
+                      <div class="stats">勝率9.8% / 複勝32.3% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 10</div> <div><span class="tag">[ワイド]</span> 10-1 / 10-6</div> <div><span class="tag">[3連複]</span> 10 - 1・6・11 流し</div> <div><span class="tag">[妙味]</span> ワイド 10-3 (トランスマリーン)</div></div></div></details><details><summary>7R 3歳以上1勝クラス</summary><div class="race-body"><span class="verdict v-skip">⚠️ 波乱注意・見送り推奨</span><div class="horse"><b>◎ 9番 カイショー</b>
+                      <div class="stats">勝率21.2% / 複勝45.6% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 12番 ジーティーエスピ</b>
+                      <div class="stats">勝率16.5% / 複勝39.3% / 3番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・スピード指数メンバー1位・当距離が得意</div></div><div class="horse"><b>▲ 7番 ニシノサリーナ</b>
+                      <div class="stats">勝率21.2% / 複勝46.1% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 9</div> <div><span class="tag">[ワイド]</span> 9-12 / 9-7</div> <div><span class="tag">[3連複]</span> 9 - 12・7・2 流し</div></div></div></details><details><summary>8R 3歳以上1勝クラス</summary><div class="race-body"><span class="verdict v-normal">🟡 標準</span><div class="horse"><b>◎ 12番 ピエナオルカ</b>
+                      <div class="stats">勝率34.2% / 複勝65.0% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 7番 オンザムービー</b>
+                      <div class="stats">勝率34.2% / 複勝69.0% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="horse"><b>▲ 5番 ジェネラスキング</b>
+                      <div class="stats">勝率12.0% / 複勝32.3% / 3番人気</div>
+                      <div class="reason">💬 近5走複勝率75%と安定・近走平均2.2着と好調・スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 12</div> <div><span class="tag">[ワイド]</span> 12-7 / 12-5</div> <div><span class="tag">[3連複]</span> 12 - 7・5・10 流し</div> <div><span class="tag">[妙味]</span> ワイド 12-8 (タイキルッジェーロ)</div></div></div></details><details><summary>9R 3歳以上1勝クラス</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 5番 シニャンガ</b>
+                      <div class="stats">勝率33.0% / 複勝75.7% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均2.0着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>○ 3番 ルーチェフィオーレ</b>
+                      <div class="stats">勝率26.0% / 複勝63.4% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均1.5着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>▲ 4番 ジェルブロア</b>
+                      <div class="stats">勝率10.3% / 複勝45.6% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・当距離が得意</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 5</div> <div><span class="tag">[ワイド]</span> 5-3 / 5-4</div> <div><span class="tag">[3連複]</span> 5 - 3・4・10 流し</div></div></div></details><details><summary>10R ライラック賞</summary><div class="race-body"><span class="verdict v-skip">⚠️ 波乱注意・見送り推奨</span><div class="horse"><b>◎ 9番 バースライト</b>
+                      <div class="stats">勝率18.6% / 複勝45.6% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり最速・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 11番 ウェイクフィールド</b>
+                      <div class="stats">勝率27.5% / 複勝48.3% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・当距離が得意</div></div><div class="horse"><b>▲ 6番 アスクデッドヒート</b>
+                      <div class="stats">勝率18.6% / 複勝43.8% / 4番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・近走平均3.0着と好調・スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 9</div> <div><span class="tag">[ワイド]</span> 9-11 / 9-6</div> <div><span class="tag">[3連複]</span> 9 - 11・6・7 流し</div></div></div></details><details><summary>11R TVh賞</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 7番 ロジケープ</b>
+                      <div class="stats">勝率32.5% / 複勝63.4% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均2.2着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>○ 3番 サウスバンク</b>
+                      <div class="stats">勝率17.1% / 複勝43.8% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・スピード指数メンバー1位・当距離が得意</div></div><div class="horse"><b>▲ 10番 アスクケンタッキー</b>
+                      <div class="stats">勝率11.4% / 複勝32.3% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・当距離が得意</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 7</div> <div><span class="tag">[ワイド]</span> 7-3 / 7-10</div> <div><span class="tag">[3連複]</span> 7 - 3・10・2 流し</div></div></div></details><details><summary>12R 桑園特別</summary><div class="race-body"><span class="verdict v-normal">🟡 標準</span><div class="horse"><b>◎ 8番 ベラジオワールド</b>
+                      <div class="stats">勝率40.6% / 複勝63.4% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 5番 セボンサデッセ</b>
+                      <div class="stats">勝率22.9% / 複勝53.9% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・近走平均2.6着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>▲ 7番 ハイクオリティ</b>
+                      <div class="stats">勝率14.1% / 複勝45.6% / 3番人気</div>
+                      <div class="reason">💬 近5走複勝率80%と安定・近走平均2.4着と好調・スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 8</div> <div><span class="tag">[ワイド]</span> 8-5 / 8-7</div> <div><span class="tag">[3連複]</span> 8 - 5・7・9 流し</div></div></div></details><h2 style="margin-top:10px">📍 新潟</h2><details><summary>1R 2歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 10番 レゾルーティオ</b>
+                      <div class="stats">勝率20.8% / 複勝86.0% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸・AI複勝率86%と信頼度高</div></div><div class="horse"><b>○ 2番 フルーツバスケット</b>
+                      <div class="stats">勝率10.6% / 複勝75.7% / 2番人気</div>
+                      <div class="reason">💬 AI複勝率76%と信頼度高</div></div><div class="horse"><b>▲ 7番 ノシェリー</b>
+                      <div class="stats">勝率10.7% / 複勝79.5% / 3番人気</div>
+                      <div class="reason">💬 AI複勝率79%と信頼度高</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 10</div> <div><span class="tag">[ワイド]</span> 10-2 / 10-7</div> <div><span class="tag">[3連複]</span> 10 - 2・7・3 流し</div> <div><span class="tag">[妙味]</span> ワイド 10-6 (ローグアン)</div></div></div></details><details><summary>2R 2歳新馬</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 4番 ピウモッソ</b>
+                      <div class="stats">勝率9.2% / 複勝79.5% / 1番人気</div>
+                      <div class="reason">💬 人気とAI評価が一致した堅軸・AI複勝率79%と信頼度高</div></div><div class="horse"><b>○ 9番 スクワミッシュ</b>
+                      <div class="stats">勝率9.2% / 複勝75.7% / 2番人気</div>
+                      <div class="reason">💬 AI複勝率76%と信頼度高</div></div><div class="horse"><b>▲ 11番 イニシャルポイント</b>
+                      <div class="stats">勝率9.2% / 複勝79.5% / 3番人気</div>
+                      <div class="reason">💬 AI複勝率79%と信頼度高</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 4</div> <div><span class="tag">[ワイド]</span> 4-9 / 4-11</div> <div><span class="tag">[3連複]</span> 4 - 9・11・5 流し</div> <div><span class="tag">[妙味]</span> ワイド 4-6 (ユイチャンファイト)</div></div></div></details><details><summary>3R 2歳新馬</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 1番 トルタパスカリーナ</b>
+                      <div class="stats">勝率24.3% / 複勝86.0% / 1番人気</div>
+                      <div class="reason">💬 人気とAI評価が一致した堅軸・AI複勝率86%と信頼度高</div></div><div class="horse"><b>○ 7番 プレママドンナ</b>
+                      <div class="stats">勝率11.6% / 複勝86.0% / 2番人気</div>
+                      <div class="reason">💬 AI複勝率86%と信頼度高</div></div><div class="horse"><b>▲ 5番 サトノスプレマシー</b>
+                      <div class="stats">勝率11.6% / 複勝79.5% / 3番人気</div>
+                      <div class="reason">💬 AI複勝率79%と信頼度高</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 1</div> <div><span class="tag">[ワイド]</span> 1-7 / 1-5</div> <div><span class="tag">[3連複]</span> 1 - 7・5・2 流し</div> <div><span class="tag">[妙味]</span> ワイド 1-6 (スイートアリッサム)</div></div></div></details><details><summary>4R 3歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 14番 マナイアカラニ</b>
+                      <div class="stats">勝率33.0% / 複勝79.5% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸・AI複勝率79%と信頼度高</div></div><div class="horse"><b>○ 3番 プリプリプリン</b>
+                      <div class="stats">勝率21.0% / 複勝75.7% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均2.0着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>▲ 15番 オレンジキャンパス</b>
+                      <div class="stats">勝率16.3% / 複勝53.9% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり上位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 14</div> <div><span class="tag">[ワイド]</span> 14-3 / 14-15</div> <div><span class="tag">[3連複]</span> 14 - 3・15・4 流し</div> <div><span class="tag">[妙味]</span> ワイド 14-1 (サンマルオブウォー)</div></div></div></details><details><summary>5R 3歳以上1勝クラス</summary><div class="race-body"><span class="verdict v-normal">🟡 標準</span><div class="horse"><b>◎ 5番 フィールドノート</b>
+                      <div class="stats">勝率19.6% / 複勝48.3% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均1.0着と好調・前走上がり最速</div></div><div class="horse"><b>○ 7番 オルグジェシダ</b>
+                      <div class="stats">勝率19.6% / 複勝46.1% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均2.0着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>▲ 11番 キシダンチョウ</b>
+                      <div class="stats">勝率26.7% / 複勝45.6% / 3番人気</div>
+                      <div class="reason">💬 近走平均2.5着と好調・当距離が得意</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 5</div> <div><span class="tag">[ワイド]</span> 5-7 / 5-11</div> <div><span class="tag">[3連複]</span> 5 - 7・11・10 流し</div></div></div></details><details><summary>6R 豊栄特別</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 14番 シャンソンドール</b>
+                      <div class="stats">勝率34.9% / 複勝65.0% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均1.8着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>○ 9番 ジーネキング</b>
+                      <div class="stats">勝率19.9% / 複勝45.6% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="horse"><b>▲ 8番 ルナルーチェット</b>
+                      <div class="stats">勝率12.3% / 複勝39.3% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり上位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 14</div> <div><span class="tag">[ワイド]</span> 14-9 / 14-8</div> <div><span class="tag">[3連複]</span> 14 - 9・8・15 流し</div> <div><span class="tag">[妙味]</span> ワイド 14-11 (ソニックライン)</div></div></div></details><details><summary>7R 新潟日報賞</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 2番 コートアリシアン</b>
+                      <div class="stats">勝率37.6% / 複勝69.0% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 8番 ボンヌソワレ</b>
+                      <div class="stats">勝率13.2% / 複勝39.3% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・当コースで好成績</div></div><div class="horse"><b>▲ 6番 ピコローズ</b>
+                      <div class="stats">勝率4.6% / 複勝32.3% / 3番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・スピード指数メンバー1位・当コースで好成績</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 2</div> <div><span class="tag">[ワイド]</span> 2-8 / 2-6</div> <div><span class="tag">[3連複]</span> 2 - 8・6・1 流し</div></div></div></details><details><summary>8R 清津峡特別</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 11番 インナーパッション</b>
+                      <div class="stats">勝率25.3% / 複勝63.4% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 6番 ロケットパンチ</b>
+                      <div class="stats">勝率17.1% / 複勝39.3% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="horse"><b>▲ 10番 パイオニアスクエア</b>
+                      <div class="stats">勝率17.1% / 複勝43.8% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 11</div> <div><span class="tag">[ワイド]</span> 11-6 / 11-10</div> <div><span class="tag">[3連複]</span> 11 - 6・10・1 流し</div></div></div></details><details><summary>9R 3歳以上障害OP</summary><div class="race-body"><span class="verdict v-normal">🟡 標準</span><div class="horse"><b>◎ 7番 ダノンロッキー</b>
+                      <div class="stats">勝率35.6% / 複勝65.0% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 3番 スコラーリ</b>
+                      <div class="stats">勝率20.3% / 複勝63.4% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり最速・当コースで好成績</div></div><div class="horse"><b>▲ 4番 サングラデーション</b>
+                      <div class="stats">勝率15.6% / 複勝50.0% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり上位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 7</div> <div><span class="tag">[ワイド]</span> 7-3 / 7-4</div> <div><span class="tag">[3連複]</span> 7 - 3・4・8 流し</div></div></div></details><details><summary>10R 3歳未勝利</summary><div class="race-body"><span class="verdict v-skip">⚠️ 波乱注意・見送り推奨</span><div class="horse"><b>◎ 12番 カーボフリオ</b>
+                      <div class="stats">勝率17.5% / 複勝63.4% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸・前走上がり上位</div></div><div class="horse"><b>○ 9番 ゴールドビリーヴ</b>
+                      <div class="stats">勝率17.1% / 複勝63.4% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり最速</div></div><div class="horse"><b>▲ 14番 バーヴァンシー</b>
+                      <div class="stats">勝率12.5% / 複勝50.0% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 12</div> <div><span class="tag">[ワイド]</span> 12-9 / 12-14</div> <div><span class="tag">[3連複]</span> 12 - 9・14・5 流し</div></div></div></details><details><summary>11R 3歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 16番 シルバーアックス</b>
+                      <div class="stats">勝率26.4% / 複勝75.7% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸・AI複勝率76%と信頼度高</div></div><div class="horse"><b>○ 18番 ジョイアミーア</b>
+                      <div class="stats">勝率26.4% / 複勝79.5% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり最速・AI複勝率79%と信頼度高</div></div><div class="horse"><b>▲ 10番 ノーブルラホーヤ</b>
+                      <div class="stats">勝率9.2% / 複勝41.3% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 16</div> <div><span class="tag">[ワイド]</span> 16-18 / 16-10</div> <div><span class="tag">[3連複]</span> 16 - 18・10・17 流し</div></div></div></details><details><summary>12R 3歳以上1勝クラス</summary><div class="race-body"><span class="verdict v-skip">⚠️ 波乱注意・見送り推奨</span><div class="horse"><b>◎ 15番 タイセイフレッサ</b>
+                      <div class="stats">勝率17.8% / 複勝39.3% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸・前走上がり上位</div></div><div class="horse"><b>○ 2番 リラ</b>
+                      <div class="stats">勝率11.0% / 複勝32.3% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・近走平均3.0着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>▲ 4番 ルージュダリア</b>
+                      <div class="stats">勝率16.4% / 複勝32.3% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・当距離が得意</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 15</div> <div><span class="tag">[ワイド]</span> 15-2 / 15-4</div> <div><span class="tag">[3連複]</span> 15 - 2・4・5 流し</div></div></div></details><h2 style="margin-top:10px">📍 中京</h2><details><summary>1R 2歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 5番 エルダークローネ</b>
+                      <div class="stats">勝率16.0% / 複勝79.5% / 1番人気</div>
+                      <div class="reason">💬 人気とAI評価が一致した堅軸・AI複勝率79%と信頼度高</div></div><div class="horse"><b>○ 1番 レッドネビュラ</b>
+                      <div class="stats">勝率14.2% / 複勝79.5% / 2番人気</div>
+                      <div class="reason">💬 AI複勝率79%と信頼度高</div></div><div class="horse"><b>▲ 6番 エコロメジャー</b>
+                      <div class="stats">勝率11.9% / 複勝65.0% / 3番人気</div>
+                      <div class="reason">💬 AI評価3位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 5</div> <div><span class="tag">[ワイド]</span> 5-1 / 5-6</div> <div><span class="tag">[3連複]</span> 5 - 1・6・3 流し</div> <div><span class="tag">[妙味]</span> ワイド 5-4 (シャインロード)</div></div></div></details><details><summary>2R 2歳新馬</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 11番 ブレイクアウェイ</b>
+                      <div class="stats">勝率14.3% / 複勝79.5% / 1番人気</div>
+                      <div class="reason">💬 人気とAI評価が一致した堅軸・AI複勝率79%と信頼度高</div></div><div class="horse"><b>○ 9番 レッドレヴェリー</b>
+                      <div class="stats">勝率9.2% / 複勝86.0% / 2番人気</div>
+                      <div class="reason">💬 AI複勝率86%と信頼度高</div></div><div class="horse"><b>▲ 1番 エアロクリスタ</b>
+                      <div class="stats">勝率9.1% / 複勝79.5% / 3番人気</div>
+                      <div class="reason">💬 AI複勝率79%と信頼度高</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 11</div> <div><span class="tag">[ワイド]</span> 11-9 / 11-1</div> <div><span class="tag">[3連複]</span> 11 - 9・1・2 流し</div> <div><span class="tag">[妙味]</span> ワイド 11-6 (ヤマトデュノール)</div></div></div></details><details><summary>3R 3歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 10番 プレスバーン</b>
+                      <div class="stats">勝率22.6% / 複勝75.7% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率67%と安定・スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 2番 レッドブライトン</b>
+                      <div class="stats">勝率18.9% / 複勝65.0% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="horse"><b>▲ 6番 コスモフィレンツェ</b>
+                      <div class="stats">勝率22.4% / 複勝75.7% / 2番人気</div>
+                      <div class="reason">💬 近走平均3.0着と好調・スピード指数メンバー1位・AI複勝率76%と信頼度高</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 10</div> <div><span class="tag">[ワイド]</span> 10-2 / 10-6</div> <div><span class="tag">[3連複]</span> 10 - 2・6・12 流し</div> <div><span class="tag">[妙味]</span> ワイド 10-8 (アメジストブリエ)</div></div></div></details><details><summary>4R 3歳未勝利</summary><div class="race-body"><span class="verdict v-skip">⚠️ 波乱注意・見送り推奨</span><div class="horse"><b>◎ 8番 ナウオアネヴァー</b>
+                      <div class="stats">勝率15.8% / 複勝65.0% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 16番 アスクハッピーマン</b>
+                      <div class="stats">勝率16.2% / 複勝63.4% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="horse"><b>▲ 14番 タロ</b>
+                      <div class="stats">勝率15.8% / 複勝63.4% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり上位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 8</div> <div><span class="tag">[ワイド]</span> 8-16 / 8-14</div> <div><span class="tag">[3連複]</span> 8 - 16・14・13 流し</div> <div><span class="tag">[妙味]</span> ワイド 8-10 (ワイドヴィンクルム)</div></div></div></details><details><summary>5R 3歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 12番 ファルカータ</b>
+                      <div class="stats">勝率23.2% / 複勝79.5% / 1番人気</div>
+                      <div class="reason">💬 人気とAI評価が一致した堅軸・AI複勝率79%と信頼度高</div></div><div class="horse"><b>○ 5番 セコンドトゥベスト</b>
+                      <div class="stats">勝率15.6% / 複勝69.0% / 3番人気</div>
+                      <div class="reason">💬 近5走複勝率67%と安定・スピード指数メンバー1位</div></div><div class="horse"><b>▲ 11番 セルヴァジオ</b>
+                      <div class="stats">勝率15.6% / 複勝65.0% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 12</div> <div><span class="tag">[ワイド]</span> 12-5 / 12-11</div> <div><span class="tag">[3連複]</span> 12 - 5・11・4 流し</div> <div><span class="tag">[妙味]</span> ワイド 12-1 (インヴァイト)</div></div></div></details><details><summary>6R 四日市特別</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 6番 ゼロヴィジビリティ</b>
+                      <div class="stats">勝率34.3% / 複勝63.4% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均2.0着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>○ 9番 ポートデラメール</b>
+                      <div class="stats">勝率19.4% / 複勝41.3% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・当コースで好成績</div></div><div class="horse"><b>▲ 13番 ヘリテージブルーム</b>
+                      <div class="stats">勝率14.1% / 複勝32.3% / 4番人気</div>
+                      <div class="reason">💬 近5走複勝率80%と安定・スピード指数メンバー1位・当コースで好成績</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 6</div> <div><span class="tag">[ワイド]</span> 6-9 / 6-13</div> <div><span class="tag">[3連複]</span> 6 - 9・13・2 流し</div></div></div></details><details><summary>7R 関ケ原S</summary><div class="race-body"><span class="verdict v-normal">🟡 標準</span><div class="horse"><b>◎ 9番 ミュージシャン</b>
+                      <div class="stats">勝率35.0% / 複勝63.4% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率80%と安定・近走平均2.8着と好調・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 1番 ミッキーゴールド</b>
+                      <div class="stats">勝率23.7% / 複勝53.9% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・当距離が得意</div></div><div class="horse"><b>▲ 7番 ハーツコンチェルト</b>
+                      <div class="stats">勝率14.5% / 複勝46.1% / 3番人気</div>
+                      <div class="reason">💬 前走上がり最速</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 9</div> <div><span class="tag">[ワイド]</span> 9-1 / 9-7</div> <div><span class="tag">[3連複]</span> 9 - 1・7・5 流し</div></div></div></details><details><summary>8R 香嵐渓特別</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 1番 スノースケープ</b>
+                      <div class="stats">勝率28.9% / 複勝75.7% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均3.0着と好調・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 5番 ブラックシャリマー</b>
+                      <div class="stats">勝率16.5% / 複勝53.9% / 3番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均2.0着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>▲ 8番 ロードフィレール</b>
+                      <div class="stats">勝率29.2% / 複勝39.3% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均1.7着と好調・スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 1</div> <div><span class="tag">[ワイド]</span> 1-5 / 1-8</div> <div><span class="tag">[3連複]</span> 1 - 5・8・2 流し</div> <div><span class="tag">[妙味]</span> ワイド 1-6 (アトレッタ)</div></div></div></details><details><summary>9R 3歳以上1勝クラス</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 2番 ルビドゥソレイユ</b>
+                      <div class="stats">勝率30.6% / 複勝63.4% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 1番 ワイズギャング</b>
+                      <div class="stats">勝率15.9% / 複勝41.3% / 4番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり上位</div></div><div class="horse"><b>▲ 12番 ダンシングドール</b>
+                      <div class="stats">勝率17.3% / 複勝45.6% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・当距離が得意</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 2</div> <div><span class="tag">[ワイド]</span> 2-1 / 2-12</div> <div><span class="tag">[3連複]</span> 2 - 1・12・16 流し</div></div></div></details><details><summary>10R 3歳以上1勝クラス</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 9番 アスクチャンスマン</b>
+                      <div class="stats">勝率16.5% / 複勝63.4% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸・前走上がり上位</div></div><div class="horse"><b>○ 2番 ガウラディスコ</b>
+                      <div class="stats">勝率16.5% / 複勝43.8% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・当距離が得意・前走上がり上位</div></div><div class="horse"><b>▲ 7番 コルヴァス</b>
+                      <div class="stats">勝率15.2% / 複勝46.1% / 3番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均1.5着と好調・スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 9</div> <div><span class="tag">[ワイド]</span> 9-2 / 9-7</div> <div><span class="tag">[3連複]</span> 9 - 2・7・1 流し</div></div></div></details><details><summary>11R 3歳以上1勝クラス</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 3番 ルージュスプリヤ</b>
+                      <div class="stats">勝率46.1% / 複勝86.0% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸・AI複勝率86%と信頼度高</div></div><div class="horse"><b>○ 7番 ケールハイム</b>
+                      <div class="stats">勝率37.0% / 複勝79.5% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率67%と安定・近走平均2.7着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>▲ 5番 ニシノトリビュート</b>
+                      <div class="stats">勝率7.4% / 複勝32.3% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 3</div> <div><span class="tag">[ワイド]</span> 3-7 / 3-5</div> <div><span class="tag">[3連複]</span> 3 - 7・5・8 流し</div></div></div></details><details><summary>12R 3歳未勝利</summary><div class="race-body"><span class="verdict v-normal">🟡 標準</span><div class="horse"><b>◎ 4番 ビッグヒーロー</b>
+                      <div class="stats">勝率15.4% / 複勝63.4% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率80%と安定・近走平均2.8着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>○ 10番 レインボーステート</b>
+                      <div class="stats">勝率13.2% / 複勝53.9% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="horse"><b>▲ 13番 ミッキーラヴィータ</b>
+                      <div class="stats">勝率15.4% / 複勝63.4% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均2.5着と好調・スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 4</div> <div><span class="tag">[ワイド]</span> 4-10 / 4-13</div> <div><span class="tag">[3連複]</span> 4 - 10・13・8 流し</div> <div><span class="tag">[妙味]</span> ワイド 4-15 (シャンジュマン)</div></div></div></details></div><div class="card"><h2>📅 7/26(日) の予想</h2><div class="hot"><span class="badge">🔥 この日一の激熱</span>
+              <div style="font-weight:bold">札幌8R 3歳以上1勝クラス</div>
+              <div style="color:#c0392b;font-weight:bold">◎ 1番 デイトナチャンプ 1番人気</div>
+              <div class="stats">AI勝率54% / 複勝79%</div></div><h2 style="margin-top:10px">📍 札幌</h2><details><summary>1R 2歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 10番 クラウスーラ</b>
+                      <div class="stats">勝率16.4% / 複勝86.0% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均2.0着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>○ 7番 リアルクウカイ</b>
+                      <div class="stats">勝率10.5% / 複勝69.0% / 2番人気</div>
+                      <div class="reason">💬 AI評価2位</div></div><div class="horse"><b>▲ 3番 サンクレセント</b>
+                      <div class="stats">勝率8.1% / 複勝63.4% / 4番人気</div>
+                      <div class="reason">💬 AI評価3位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 10</div> <div><span class="tag">[ワイド]</span> 10-7 / 10-3</div> <div><span class="tag">[3連複]</span> 10 - 7・3・6 流し</div> <div><span class="tag">[妙味]</span> ワイド 10-5 (ラストモーメント)</div></div></div></details><details><summary>2R 3歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 6番 プルーフリーディン</b>
+                      <div class="stats">勝率39.3% / 複勝79.5% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸・AI複勝率79%と信頼度高</div></div><div class="horse"><b>○ 8番 ルパピヨンブラン</b>
+                      <div class="stats">勝率14.3% / 複勝53.9% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり上位</div></div><div class="horse"><b>▲ 2番 ビレッジルイーザ</b>
+                      <div class="stats">勝率14.3% / 複勝48.3% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 6</div> <div><span class="tag">[ワイド]</span> 6-8 / 6-2</div> <div><span class="tag">[3連複]</span> 6 - 8・2・5 流し</div></div></div></details><details><summary>3R 3歳未勝利</summary><div class="race-body"><span class="verdict v-skip">⚠️ 波乱注意・見送り推奨</span><div class="horse"><b>◎ 14番 モズヴイ</b>
+                      <div class="stats">勝率14.2% / 複勝46.1% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 8番 ハルヒメ</b>
+                      <div class="stats">勝率14.2% / 複勝48.3% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・スピード指数メンバー1位</div></div><div class="horse"><b>▲ 10番 アンジュラフィーユ</b>
+                      <div class="stats">勝率14.2% / 複勝48.3% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 14</div> <div><span class="tag">[ワイド]</span> 14-8 / 14-10</div> <div><span class="tag">[3連複]</span> 14 - 8・10・3 流し</div> <div><span class="tag">[妙味]</span> ワイド 14-13 (ムーンリットレイン)</div></div></div></details><details><summary>4R 3歳未勝利</summary><div class="race-body"><span class="verdict v-normal">🟡 標準</span><div class="horse"><b>◎ 9番 シンエンドーツダ</b>
+                      <div class="stats">勝率21.9% / 複勝65.0% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 4番 アンミックス</b>
+                      <div class="stats">勝率21.9% / 複勝63.4% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="horse"><b>▲ 5番 メイショウタイザン</b>
+                      <div class="stats">勝率15.7% / 複勝50.0% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 9</div> <div><span class="tag">[ワイド]</span> 9-4 / 9-5</div> <div><span class="tag">[3連複]</span> 9 - 4・5・6 流し</div></div></div></details><details><summary>5R 2歳新馬</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 3番 コスモトップ</b>
+                      <div class="stats">勝率8.7% / 複勝79.5% / 1番人気</div>
+                      <div class="reason">💬 人気とAI評価が一致した堅軸・AI複勝率79%と信頼度高</div></div><div class="horse"><b>○ 4番 リアライズセレスト</b>
+                      <div class="stats">勝率8.5% / 複勝75.7% / 2番人気</div>
+                      <div class="reason">💬 AI複勝率76%と信頼度高</div></div><div class="horse"><b>▲ 6番 レゾンフォルテ</b>
+                      <div class="stats">勝率10.9% / 複勝79.5% / 3番人気</div>
+                      <div class="reason">💬 AI複勝率79%と信頼度高</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 3</div> <div><span class="tag">[ワイド]</span> 3-4 / 3-6</div> <div><span class="tag">[3連複]</span> 3 - 4・6・2 流し</div> <div><span class="tag">[妙味]</span> ワイド 3-7 (マイネルラビリンス)</div></div></div></details><details><summary>6R 3歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 2番 ミッキーテネシー</b>
+                      <div class="stats">勝率25.2% / 複勝75.7% / 2番人気</div>
+                      <div class="reason">💬 人気とAI評価が一致した堅軸・AI複勝率76%と信頼度高</div></div><div class="horse"><b>○ 9番 ヘイジュード</b>
+                      <div class="stats">勝率25.2% / 複勝75.7% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率67%と安定・近走平均3.0着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>▲ 12番 ロッサコメータ</b>
+                      <div class="stats">勝率14.3% / 複勝48.3% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 2</div> <div><span class="tag">[ワイド]</span> 2-9 / 2-12</div> <div><span class="tag">[3連複]</span> 2 - 9・12・8 流し</div> <div><span class="tag">[妙味]</span> ワイド 2-4 (ダディーズソード)</div></div></div></details><details><summary>7R 3歳以上1勝クラス</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 5番 ビタミンドロップ</b>
+                      <div class="stats">勝率32.9% / 複勝63.4% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 4番 ロードヴァルカン</b>
+                      <div class="stats">勝率14.4% / 複勝41.3% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・近走平均3.0着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>▲ 6番 ナムラモモ</b>
+                      <div class="stats">勝率11.6% / 複勝38.9% / 3番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・スピード指数メンバー1位・当コースで好成績</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 5</div> <div><span class="tag">[ワイド]</span> 5-4 / 5-6</div> <div><span class="tag">[3連複]</span> 5 - 4・6・2 流し</div></div></div></details><details><summary>8R 3歳以上1勝クラス</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 1番 デイトナチャンプ</b>
+                      <div class="stats">勝率54.0% / 複勝79.5% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均1.5着と好調・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 2番 ナハトナナレオン</b>
+                      <div class="stats">勝率9.7% / 複勝32.3% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="horse"><b>▲ 3番 メイショウハッケイ</b>
+                      <div class="stats">勝率6.1% / 複勝24.4% / 6番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 1</div> <div><span class="tag">[ワイド]</span> 1-2 / 1-3</div> <div><span class="tag">[3連複]</span> 1 - 2・3・10 流し</div></div></div></details><details><summary>9R 3歳以上1勝クラス</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 5番 マーゴットサンズ</b>
+                      <div class="stats">勝率32.1% / 複勝69.0% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 8番 ラウニウ</b>
+                      <div class="stats">勝率21.7% / 複勝53.9% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり上位・休み明け（344日）</div></div><div class="horse"><b>▲ 6番 カルミアクラウン</b>
+                      <div class="stats">勝率10.1% / 複勝39.3% / 4番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり上位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 5</div> <div><span class="tag">[ワイド]</span> 5-8 / 5-6</div> <div><span class="tag">[3連複]</span> 5 - 8・6・1 流し</div></div></div></details><details><summary>10R 羊ケ丘特別</summary><div class="race-body"><span class="verdict v-normal">🟡 標準</span><div class="horse"><b>◎ 10番 ヒズマスターピース</b>
+                      <div class="stats">勝率31.6% / 複勝53.9% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 5番 マーゴットブロー</b>
+                      <div class="stats">勝率21.1% / 複勝53.9% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・当コースで好成績</div></div><div class="horse"><b>▲ 9番 ジャズ</b>
+                      <div class="stats">勝率11.1% / 複勝39.3% / 5番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 10</div> <div><span class="tag">[ワイド]</span> 10-5 / 10-9</div> <div><span class="tag">[3連複]</span> 10 - 5・9・6 流し</div></div></div></details><details><summary>11R 札幌日経賞</summary><div class="race-body"><span class="verdict v-normal">🟡 標準</span><div class="horse"><b>◎ 3番 レクスノヴァス</b>
+                      <div class="stats">勝率24.8% / 複勝53.9% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率80%と安定・近走平均3.0着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>○ 2番 ミラージュナイト</b>
+                      <div class="stats">勝率20.8% / 複勝63.4% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率80%と安定・近走平均2.4着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>▲ 11番 アマキヒ</b>
+                      <div class="stats">勝率11.5% / 複勝32.3% / 3番人気</div>
+                      <div class="reason">💬 近5走複勝率80%と安定・スピード指数メンバー1位・当コースで好成績</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 3</div> <div><span class="tag">[ワイド]</span> 3-2 / 3-11</div> <div><span class="tag">[3連複]</span> 3 - 2・11・8 流し</div></div></div></details><details><summary>12R 厚岸特別</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 1番 クリスレジーナ</b>
+                      <div class="stats">勝率48.5% / 複勝79.5% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率75%と安定・スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 8番 デルシエロ</b>
+                      <div class="stats">勝率17.6% / 複勝63.4% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり最速</div></div><div class="horse"><b>▲ 9番 ドルチェリターン</b>
+                      <div class="stats">勝率10.8% / 複勝48.3% / 3番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・スピード指数メンバー1位・前走上がり上位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 1</div> <div><span class="tag">[ワイド]</span> 1-8 / 1-9</div> <div><span class="tag">[3連複]</span> 1 - 8・9・5 流し</div> <div><span class="tag">[妙味]</span> ワイド 1-5 (カイシンパジェント)</div></div></div></details><h2 style="margin-top:10px">📍 新潟</h2><details><summary>1R 2歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 7番 リリカルフレア</b>
+                      <div class="stats">勝率11.0% / 複勝86.0% / 1番人気</div>
+                      <div class="reason">💬 人気とAI評価が一致した堅軸・AI複勝率86%と信頼度高</div></div><div class="horse"><b>○ 4番 ブラックミューズ</b>
+                      <div class="stats">勝率11.1% / 複勝79.5% / 2番人気</div>
+                      <div class="reason">💬 AI複勝率79%と信頼度高</div></div><div class="horse"><b>▲ 5番 アテナブレイブ</b>
+                      <div class="stats">勝率11.1% / 複勝79.5% / 3番人気</div>
+                      <div class="reason">💬 AI複勝率79%と信頼度高</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 7</div> <div><span class="tag">[ワイド]</span> 7-4 / 7-5</div> <div><span class="tag">[3連複]</span> 7 - 4・5・6 流し</div> <div><span class="tag">[妙味]</span> ワイド 7-2 (ハルガスミ)</div></div></div></details><details><summary>2R 2歳新馬</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 3番 ダノンダックス</b>
+                      <div class="stats">勝率16.7% / 複勝79.5% / 1番人気</div>
+                      <div class="reason">💬 人気とAI評価が一致した堅軸・AI複勝率79%と信頼度高</div></div><div class="horse"><b>○ 9番 ドミナートル</b>
+                      <div class="stats">勝率10.7% / 複勝86.0% / 2番人気</div>
+                      <div class="reason">💬 AI複勝率86%と信頼度高</div></div><div class="horse"><b>▲ 6番 トウシンマジック</b>
+                      <div class="stats">勝率10.8% / 複勝79.5% / 3番人気</div>
+                      <div class="reason">💬 AI複勝率79%と信頼度高</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 3</div> <div><span class="tag">[ワイド]</span> 3-9 / 3-6</div> <div><span class="tag">[3連複]</span> 3 - 9・6・1 流し</div> <div><span class="tag">[妙味]</span> ワイド 3-5 (コスモティタノ)</div></div></div></details><details><summary>3R 3歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 8番 ミスタートントン</b>
+                      <div class="stats">勝率23.5% / 複勝71.4% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率80%と安定・スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 11番 ミエスタ</b>
+                      <div class="stats">勝率23.5% / 複勝71.4% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率67%と安定・スピード指数メンバー1位・AI複勝率71%と信頼度高</div></div><div class="horse"><b>▲ 15番 ハンナパール</b>
+                      <div class="stats">勝率12.4% / 複勝45.6% / 4番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり最速</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 8</div> <div><span class="tag">[ワイド]</span> 8-11 / 8-15</div> <div><span class="tag">[3連複]</span> 8 - 11・15・6 流し</div> <div><span class="tag">[妙味]</span> ワイド 8-10 (キタノシオン)</div></div></div></details><details><summary>4R 3歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 14番 ココナッツコースト</b>
+                      <div class="stats">勝率24.6% / 複勝75.7% / 1番人気</div>
+                      <div class="reason">💬 人気とAI評価が一致した堅軸・AI複勝率76%と信頼度高・休み明け（202日）</div></div><div class="horse"><b>○ 8番 ルモンテ</b>
+                      <div class="stats">勝率19.1% / 複勝53.9% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり上位</div></div><div class="horse"><b>▲ 2番 シルフィー</b>
+                      <div class="stats">勝率10.2% / 複勝32.3% / 3番人気</div>
+                      <div class="reason">💬 前走上がり最速</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 14</div> <div><span class="tag">[ワイド]</span> 14-8 / 14-2</div> <div><span class="tag">[3連複]</span> 14 - 8・2・1 流し</div> <div><span class="tag">[妙味]</span> ワイド 14-18 (クールチェンジ)</div></div></div></details><details><summary>5R 3歳以上1勝クラス</summary><div class="race-body"><span class="verdict v-skip">⚠️ 波乱注意・見送り推奨</span><div class="horse"><b>◎ 14番 ショウナンタハティ</b>
+                      <div class="stats">勝率14.0% / 複勝46.1% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり最速・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 11番 ショコラキュイ</b>
+                      <div class="stats">勝率18.2% / 複勝39.3% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="horse"><b>▲ 6番 ムーンブランシュ</b>
+                      <div class="stats">勝率14.0% / 複勝39.3% / 5番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 14</div> <div><span class="tag">[ワイド]</span> 14-11 / 14-6</div> <div><span class="tag">[3連複]</span> 14 - 11・6・10 流し</div></div></div></details><details><summary>6R 出雲崎特別</summary><div class="race-body"><span class="verdict v-skip">⚠️ 波乱注意・見送り推奨</span><div class="horse"><b>◎ 7番 ソウルオンファイア</b>
+                      <div class="stats">勝率25.7% / 複勝43.8% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 6番 リッキースタイル</b>
+                      <div class="stats">勝率13.3% / 複勝39.3% / 4番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="horse"><b>▲ 8番 ラヴオントップ</b>
+                      <div class="stats">勝率15.8% / 複勝39.3% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・当コースで好成績・前走上がり上位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 7</div> <div><span class="tag">[ワイド]</span> 7-6 / 7-8</div> <div><span class="tag">[3連複]</span> 7 - 6・8・1 流し</div></div></div></details><details><summary>7R 関屋記念</summary><div class="race-body"><span class="verdict v-skip">⚠️ 波乱注意・見送り推奨</span><div class="horse"><b>◎ 8番 ダノンセンチュリー</b>
+                      <div class="stats">勝率17.7% / 複勝39.3% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率80%と安定・近走平均3.0着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>○ 3番 アンパドゥ</b>
+                      <div class="stats">勝率11.8% / 複勝39.3% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率80%と安定・近走平均2.4着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>▲ 10番 クランフォード</b>
+                      <div class="stats">勝率10.6% / 複勝32.3% / 4番人気</div>
+                      <div class="reason">💬 当距離が得意</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 8</div> <div><span class="tag">[ワイド]</span> 8-3 / 8-10</div> <div><span class="tag">[3連複]</span> 8 - 3・10・1 流し</div></div></div></details><details><summary>8R 麒麟山特別</summary><div class="race-body"><span class="verdict v-skip">⚠️ 波乱注意・見送り推奨</span><div class="horse"><b>◎ 3番 ヴァンアグレアブル</b>
+                      <div class="stats">勝率12.2% / 複勝39.3% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 7番 ケイツーリーブル</b>
+                      <div class="stats">勝率12.2% / 複勝32.3% / 6番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・当距離が得意</div></div><div class="horse"><b>▲ 11番 パイシャオピン</b>
+                      <div class="stats">勝率12.2% / 複勝39.3% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・近走平均3.0着と好調・スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 3</div> <div><span class="tag">[ワイド]</span> 3-7 / 3-11</div> <div><span class="tag">[3連複]</span> 3 - 7・11・1 流し</div></div></div></details><details><summary>9R 3歳以上障害未勝利</summary><div class="race-body"><span class="verdict v-normal">🟡 標準</span><div class="horse"><b>◎ 8番 ノーブルクライ</b>
+                      <div class="stats">勝率28.4% / 複勝63.4% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり最速・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 5番 キャネル</b>
+                      <div class="stats">勝率23.9% / 複勝53.9% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり上位</div></div><div class="horse"><b>▲ 14番 オーサムストローク</b>
+                      <div class="stats">勝率9.2% / 複勝32.3% / 4番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 8</div> <div><span class="tag">[ワイド]</span> 8-5 / 8-14</div> <div><span class="tag">[3連複]</span> 8 - 5・14・12 流し</div></div></div></details><details><summary>10R 3歳未勝利</summary><div class="race-body"><span class="verdict v-skip">⚠️ 波乱注意・見送り推奨</span><div class="horse"><b>◎ 8番 エーデルクラフト</b>
+                      <div class="stats">勝率12.1% / 複勝53.9% / 2番人気</div>
+                      <div class="reason">💬 人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 9番 トップデュオ</b>
+                      <div class="stats">勝率19.4% / 複勝53.9% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="horse"><b>▲ 4番 パーシヴァル</b>
+                      <div class="stats">勝率15.6% / 複勝53.9% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり上位・休み明け（217日）</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 8</div> <div><span class="tag">[ワイド]</span> 8-9 / 8-4</div> <div><span class="tag">[3連複]</span> 8 - 9・4・5 流し</div></div></div></details><details><summary>11R 3歳以上1勝クラス</summary><div class="race-body"><span class="verdict v-skip">⚠️ 波乱注意・見送り推奨</span><div class="horse"><b>◎ 15番 ルブリアン</b>
+                      <div class="stats">勝率23.6% / 複勝46.1% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 5番 シャンクス</b>
+                      <div class="stats">勝率12.2% / 複勝39.3% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・休み明け（162日）</div></div><div class="horse"><b>▲ 14番 ブラックティンカー</b>
+                      <div class="stats">勝率12.2% / 複勝32.6% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 15</div> <div><span class="tag">[ワイド]</span> 15-5 / 15-14</div> <div><span class="tag">[3連複]</span> 15 - 5・14・10 流し</div></div></div></details><details><summary>12R 3歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 13番 ファランギーナ</b>
+                      <div class="stats">勝率34.9% / 複勝86.0% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり最速・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 2番 ミナヅキ</b>
+                      <div class="stats">勝率12.7% / 複勝45.6% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="horse"><b>▲ 7番 ハナコトバ</b>
+                      <div class="stats">勝率12.7% / 複勝46.1% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 13</div> <div><span class="tag">[ワイド]</span> 13-2 / 13-7</div> <div><span class="tag">[3連複]</span> 13 - 2・7・14 流し</div></div></div></details><h2 style="margin-top:10px">📍 中京</h2><details><summary>1R 2歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 1番 メアグローリア</b>
+                      <div class="stats">勝率12.7% / 複勝86.0% / 1番人気</div>
+                      <div class="reason">💬 人気とAI評価が一致した堅軸・AI複勝率86%と信頼度高</div></div><div class="horse"><b>○ 8番 サンタンジェロ</b>
+                      <div class="stats">勝率12.6% / 複勝75.7% / 3番人気</div>
+                      <div class="reason">💬 AI複勝率76%と信頼度高</div></div><div class="horse"><b>▲ 6番 ルースソラール</b>
+                      <div class="stats">勝率12.7% / 複勝65.0% / 2番人気</div>
+                      <div class="reason">💬 AI評価3位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 1</div> <div><span class="tag">[ワイド]</span> 1-8 / 1-6</div> <div><span class="tag">[3連複]</span> 1 - 8・6・2 流し</div> <div><span class="tag">[妙味]</span> ワイド 1-3 (ララララブソング)</div></div></div></details><details><summary>2R 2歳新馬</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 3番 ルナパッショーネ</b>
+                      <div class="stats">勝率17.1% / 複勝75.7% / 1番人気</div>
+                      <div class="reason">💬 人気とAI評価が一致した堅軸・AI複勝率76%と信頼度高</div></div><div class="horse"><b>○ 5番 オーバーシュタイン</b>
+                      <div class="stats">勝率17.1% / 複勝75.7% / 2番人気</div>
+                      <div class="reason">💬 AI複勝率76%と信頼度高</div></div><div class="horse"><b>▲ 1番 レッドタイラント</b>
+                      <div class="stats">勝率17.1% / 複勝86.0% / 3番人気</div>
+                      <div class="reason">💬 AI複勝率86%と信頼度高</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 3</div> <div><span class="tag">[ワイド]</span> 3-5 / 3-1</div> <div><span class="tag">[3連複]</span> 3 - 5・1・2 流し</div> <div><span class="tag">[妙味]</span> ワイド 3-4 (テーオーカメリア)</div></div></div></details><details><summary>3R 3歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 6番 ダノンミッドナイト</b>
+                      <div class="stats">勝率44.9% / 複勝86.0% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸・AI複勝率86%と信頼度高</div></div><div class="horse"><b>○ 8番 ナムラヴンダー</b>
+                      <div class="stats">勝率13.0% / 複勝63.4% / 3番人気</div>
+                      <div class="reason">💬 AI評価2位</div></div><div class="horse"><b>▲ 9番 オープンザパンドラ</b>
+                      <div class="stats">勝率17.8% / 複勝65.0% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり上位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 6</div> <div><span class="tag">[ワイド]</span> 6-8 / 6-9</div> <div><span class="tag">[3連複]</span> 6 - 8・9・7 流し</div> <div><span class="tag">[妙味]</span> ワイド 6-10 (ヴィスメンティス)</div></div></div></details><details><summary>4R 3歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 1番 アイランド</b>
+                      <div class="stats">勝率27.6% / 複勝86.0% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均3.0着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>○ 14番 マーチンゲール</b>
+                      <div class="stats">勝率11.9% / 複勝63.4% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="horse"><b>▲ 13番 マテンロウアワー</b>
+                      <div class="stats">勝率10.0% / 複勝53.9% / 4番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり上位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 1</div> <div><span class="tag">[ワイド]</span> 1-14 / 1-13</div> <div><span class="tag">[3連複]</span> 1 - 14・13・11 流し</div> <div><span class="tag">[妙味]</span> ワイド 1-3 (シギーコルエンド)</div></div></div></details><details><summary>5R 3歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 14番 セッシュウ</b>
+                      <div class="stats">勝率37.3% / 複勝86.0% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均2.5着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>○ 1番 ジョーカー</b>
+                      <div class="stats">勝率10.8% / 複勝63.4% / 3番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均2.2着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>▲ 6番 ペプチドレオン</b>
+                      <div class="stats">勝率14.8% / 複勝65.0% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均2.8着と好調・スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 14</div> <div><span class="tag">[ワイド]</span> 14-1 / 14-6</div> <div><span class="tag">[3連複]</span> 14 - 1・6・15 流し</div> <div><span class="tag">[妙味]</span> ワイド 14-3 (メイショウドキョウ)</div></div></div></details><details><summary>6R 木曽川特別</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 1番 サヴォアフェール</b>
+                      <div class="stats">勝率47.7% / 複勝75.7% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率75%と安定・近走平均2.5着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>○ 6番 マディソンガール</b>
+                      <div class="stats">勝率17.3% / 複勝48.3% / 2番人気</div>
+                      <div class="reason">💬 当コースで好成績</div></div><div class="horse"><b>▲ 5番 ホウオウタイタン</b>
+                      <div class="stats">勝率9.6% / 複勝43.8% / 4番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・スピード指数メンバー1位・前走上がり最速</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 1</div> <div><span class="tag">[ワイド]</span> 1-6 / 1-5</div> <div><span class="tag">[3連複]</span> 1 - 6・5・2 流し</div></div></div></details><details><summary>7R 東海S</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 5番 ドンインザムード</b>
+                      <div class="stats">勝率37.5% / 複勝75.7% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率80%と安定・近走平均2.4着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>○ 8番 ベルジュロネット</b>
+                      <div class="stats">勝率13.0% / 複勝32.3% / 4番人気</div>
+                      <div class="reason">💬 近5走複勝率80%と安定・近走平均2.2着と好調・スピード指数メンバー1位</div></div><div class="horse"><b>▲ 7番 ダノンフィーゴ</b>
+                      <div class="stats">勝率13.0% / 複勝41.3% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均1.4着と好調・スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 5</div> <div><span class="tag">[ワイド]</span> 5-8 / 5-7</div> <div><span class="tag">[3連複]</span> 5 - 8・7・13 流し</div></div></div></details><details><summary>8R 遠州灘特別</summary><div class="race-body"><span class="verdict v-normal">🟡 標準</span><div class="horse"><b>◎ 5番 ユウトザユウト</b>
+                      <div class="stats">勝率23.6% / 複勝53.9% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸・前走上がり上位</div></div><div class="horse"><b>○ 4番 ジョータルマエ</b>
+                      <div class="stats">勝率12.2% / 複勝45.6% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・当コースで好成績</div></div><div class="horse"><b>▲ 7番 ハギノコラソン</b>
+                      <div class="stats">勝率12.2% / 複勝41.3% / 3番人気</div>
+                      <div class="reason">💬 近5走複勝率100%と安定・近走平均2.4着と好調・スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 5</div> <div><span class="tag">[ワイド]</span> 5-4 / 5-7</div> <div><span class="tag">[3連複]</span> 5 - 4・7・2 流し</div> <div><span class="tag">[妙味]</span> ワイド 5-10 (ノボリクレバー)</div></div></div></details><details><summary>9R 3歳以上1勝クラス</summary><div class="race-body"><span class="verdict v-normal">🟡 標準</span><div class="horse"><b>◎ 6番 スウィッチインラヴ</b>
+                      <div class="stats">勝率20.8% / 複勝48.3% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率75%と安定・人気とAI評価が一致した堅軸・当距離が得意</div></div><div class="horse"><b>○ 4番 ルージュバロン</b>
+                      <div class="stats">勝率17.9% / 複勝45.6% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・当距離が得意・前走上がり上位</div></div><div class="horse"><b>▲ 8番 メイクワンズデイ</b>
+                      <div class="stats">勝率15.2% / 複勝45.6% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 6</div> <div><span class="tag">[ワイド]</span> 6-4 / 6-8</div> <div><span class="tag">[3連複]</span> 6 - 4・8・10 流し</div> <div><span class="tag">[妙味]</span> ワイド 6-11 (テルヴィセクス)</div></div></div></details><details><summary>10R 3歳以上1勝クラス</summary><div class="race-body"><span class="verdict v-normal">🟡 標準</span><div class="horse"><b>◎ 10番 ポッドリプル</b>
+                      <div class="stats">勝率24.1% / 複勝53.9% / 1番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり最速・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 2番 ラブインアクション</b>
+                      <div class="stats">勝率16.3% / 複勝41.3% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・当コースで好成績</div></div><div class="horse"><b>▲ 15番 マイティキングダム</b>
+                      <div class="stats">勝率16.3% / 複勝41.3% / 2番人気</div>
+                      <div class="reason">💬 近5走複勝率80%と安定・近走平均2.8着と好調・スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 10</div> <div><span class="tag">[ワイド]</span> 10-2 / 10-15</div> <div><span class="tag">[3連複]</span> 10 - 2・15・11 流し</div></div></div></details><details><summary>11R 3歳以上1勝クラス</summary><div class="race-body"><span class="verdict v-skip">⚠️ 波乱注意・見送り推奨</span><div class="horse"><b>◎ 2番 カラペルソナ</b>
+                      <div class="stats">勝率12.8% / 複勝39.3% / 2番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・人気とAI評価が一致した堅軸・前走上がり上位</div></div><div class="horse"><b>○ 11番 バースデイフライト</b>
+                      <div class="stats">勝率16.2% / 複勝39.3% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位・前走上がり最速</div></div><div class="horse"><b>▲ 13番 シャンパンライフ</b>
+                      <div class="stats">勝率10.8% / 複勝39.3% / 4番人気</div>
+                      <div class="reason">💬 近5走複勝率60%と安定・近走平均3.0着と好調・スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 2</div> <div><span class="tag">[ワイド]</span> 2-11 / 2-13</div> <div><span class="tag">[3連複]</span> 2 - 11・13・1 流し</div></div></div></details><details><summary>12R 3歳未勝利</summary><div class="race-body"><span class="verdict v-solid">🟢 堅そう</span><div class="horse"><b>◎ 7番 チュウワメロディー</b>
+                      <div class="stats">勝率47.1% / 複勝96.7% / 1番人気</div>
+                      <div class="reason">💬 近5走複勝率80%と安定・スピード指数メンバー1位・人気とAI評価が一致した堅軸</div></div><div class="horse"><b>○ 3番 コースタルロード</b>
+                      <div class="stats">勝率14.9% / 複勝45.6% / 2番人気</div>
+                      <div class="reason">💬 AI評価2位</div></div><div class="horse"><b>▲ 15番 ウイングサンライズ</b>
+                      <div class="stats">勝率7.8% / 複勝41.3% / 3番人気</div>
+                      <div class="reason">💬 スピード指数メンバー1位</div></div><div class="bets">💰 <div><span class="tag">[手堅く]</span> 複勝 7</div> <div><span class="tag">[ワイド]</span> 7-3 / 7-15</div> <div><span class="tag">[3連複]</span> 7 - 3・15・1 流し</div> <div><span class="tag">[妙味]</span> ワイド 7-14 (グランブリーゼ)</div></div></div></details></div><div class="card"><h2>📊 これまでの成績</h2><div class="note" style="color:#2d7a3a;font-weight:bold">先週末(07/19): 2戦 単勝0 複勝2 回収率0%</div><div class="stat-grid" style="margin-top:8px">
+          <div class="stat-box"><div class="n">33</div><div class="l">確定レース</div></div>
+          <div class="stat-box"><div class="n">9</div><div class="l">単勝的中</div></div>
+          <div class="stat-box"><div class="n">25</div><div class="l">複勝的中</div></div>
+          <div class="stat-box"><div class="n">76%</div><div class="l">単勝回収率</div></div>
+        </div><div class="hist">07-19 函館2歳S ◎シグレ <span class="hit">複勝的中</span></div><div class="hist">07-19 小倉記念 ◎ガイアメンテ <span class="hit">複勝的中</span></div><div class="hist">06-14 宝塚記念 ◎クロワデュノール <span class="hit">複勝的中</span></div><div class="hist">07-05 北九州記念 ◎フリッカージャブ <span class="hit">単勝的中</span></div><div class="hist">06-28 函館記念 ◎フィーリウス <span class="miss">ハズレ</span></div><div class="hist">06-27 バーデンバーデンC ◎マリアイリダータ <span class="hit">単勝的中</span></div><div class="hist">06-27 青函S ◎アメリカンステージ <span class="hit">複勝的中</span></div><div class="hist">06-27 2歳新馬 ◎カエリールークス <span class="hit">単勝的中</span></div><div class="hist">06-27 3歳未勝利 ◎エリカビアリッツ <span class="hit">複勝的中</span></div><div class="hist">06-27 2歳新馬 ◎ステラトップガン <span class="hit">複勝的中</span></div><div class="hist">06-27 3歳未勝利 ◎コイオステソーロ <span class="hit">単勝的中</span></div><div class="hist">06-27 3歳未勝利 ◎エアヴァイブス <span class="hit">複勝的中</span></div></div><div class="note" style="text-align:center">
+      オッズ・期待値は生成時点の値です。最新のリアルタイム予想はPC起動時にアプリ本体で確認できます。<br>
+      このページは自動生成です（個人用）。</div>
+</div></body></html>
